@@ -17,8 +17,8 @@ COPY . .
 
 EXPOSE 8080
 
-CMD [ "uname -r" ]
-CMD [ "docker build -t yarmak/opera-proxy:latest" ]
+CMD [ "./go/opera-proxy/opera-proxy.linux-amd64 -country EU" ]
+RUN docker build -t yarmak/opera-proxy:latest
 
 CMD [ "node", "index.js" ]
 
