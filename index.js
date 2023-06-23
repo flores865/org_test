@@ -2,7 +2,7 @@ console.log(`--- NODE.JS RUN ---`);
 
 const { exec } = require("child_process");
 
-exec("ls -la", (error, stdout, stderr) => {
+exec("pwd; ls -la ..", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
@@ -14,13 +14,6 @@ exec("ls -la", (error, stdout, stderr) => {
     console.log(`stdout: ${stdout}`);
 });
 
-const testFolder = './';
-const fs = require('fs');
-fs.readdir(testFolder, (err, files) => {
-  files.forEach(file => {
-    console.log(file);
-  });
-});
 
 //const { exec } = require('child_process');
 //'ls -lh' list files in directory
