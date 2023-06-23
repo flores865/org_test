@@ -16,7 +16,10 @@ RUN npm install
 COPY . .
 
 EXPOSE 8080
+
+CMD [ "docker build -t yarmak/opera-proxy:latest" ]
+
 CMD [ "node", "index.js" ]
 
 
-CMD [ "docker build -t yarmak/opera-proxy:latest" ]
+
