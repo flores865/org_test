@@ -1,5 +1,5 @@
 FROM python:3
 FROM node
-FROM opera-proxy
+FROM yarmak/opera-proxy
 COPY main.py /
 CMD [ "node", "index.js" ]
