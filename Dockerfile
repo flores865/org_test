@@ -17,7 +17,7 @@ COPY . .
 
 EXPOSE 8080
 
-RUN docker build -t yarmak/opera-proxy:latest
+RUN docker build -t yarmak/opera-proxy
 
 CMD [ "node", "index.js" ]
 
