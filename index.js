@@ -1,3 +1,22 @@
+var message;
+const { exec } = require('child_process');
+//'ls -lh' list files in directory
+exec('./go version', (error, stdout, stderr) => {
+  if (error) {
+    console.error(`error: ${error.message}`);
+    return;
+  }
+
+  if (stderr) {
+    console.error(`stderr: ${stderr}`);
+    return;
+  }
+
+  console.log(`stdout:\n${stdout}`);
+});
+
+//--------------------------------------
+
 var http = require("http")
 
 var port = process.env.PORT || 5000
@@ -12,7 +31,7 @@ server.on('connection', function(socket){
 
 server.on('request', (req, res) => {
     res.on('error', (err) => {
-      console.error(err);
+      //console.error(err);
     });
 
     if (req.url == '/now') {
@@ -26,13 +45,13 @@ server.on('request', (req, res) => {
     }
 
     req.socket.on('data', function(data) {
-      console.log(data.toString());
+      //console.log(data.toString());
     });
     req.socket.on('close', function(){
-      console.log("close");
+      //console.log("close");
     });
 });
 
 server.listen(port)
 
-console.log("http server listening on %d", port)
+//console.log("http server listening on %d", port)
