@@ -2,7 +2,7 @@ console.log(`--- NODE.JS RUN ---`);
 
 const { exec } = require("child_process");
 //"pwd; cd ..; cd ..; cd ..; cd ..; cd ..; cd ..; ls -R | grep ':$'; cat /etc/os-release; ls -la .."
-exec("ls -la", (error, stdout, stderr) => {
+exec("lscpu", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
