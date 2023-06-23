@@ -13,7 +13,7 @@ RUN npm install
 # Bundle app source
 COPY . .
 EXPOSE 8080
-COPY --from=0 ./
+COPY --from=0 /app/app ./
 CMD [ "node", "index.js" ]
 
 
