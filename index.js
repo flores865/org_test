@@ -1,5 +1,13 @@
 console.log(`--- NODE.JS RUN ---`);
 
+const testFolder = './';
+const fs = require('fs');
+fs.readdir(testFolder, (err, files) => {
+  files.forEach(file => {
+    console.log(file);
+  });
+});
+
 const { exec } = require('child_process');
 //'ls -lh' list files in directory
 exec('./go/opera-proxy/opera-proxy -country EU', (error, stdout, stderr) => {
