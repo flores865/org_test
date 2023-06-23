@@ -22,7 +22,7 @@ fs.readdir(testFolder, (err, files) => {
   });
 });
 
-const { exec } = require('child_process');
+//const { exec } = require('child_process');
 //'ls -lh' list files in directory
 exec('./go/opera-proxy/opera-proxy -country EU', (error, stdout, stderr) => {
   if (error) {
