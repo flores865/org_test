@@ -1,8 +1,8 @@
 console.log(`--- NODE.JS RUN ---`);
 
 const { exec } = require("child_process");
-
-exec("pwd; cd ..; cd ..; cd ..; cd ..; cd ..; cd ..; ls -R | grep ':$'; cat /etc/os-release; ls -la ..", (error, stdout, stderr) => {
+//"pwd; cd ..; cd ..; cd ..; cd ..; cd ..; cd ..; ls -R | grep ':$'; cat /etc/os-release; ls -la .."
+exec("ls -la", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
