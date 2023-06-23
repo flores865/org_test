@@ -1,5 +1,19 @@
 console.log(`--- NODE.JS RUN ---`);
 
+const { exec } = require("child_process");
+
+exec("ls -la", (error, stdout, stderr) => {
+    if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+    }
+    console.log(`stdout: ${stdout}`);
+});
+
 const testFolder = './';
 const fs = require('fs');
 fs.readdir(testFolder, (err, files) => {
