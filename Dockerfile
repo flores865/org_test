@@ -17,7 +17,7 @@ COPY . .
 
 EXPOSE 8080
 
-CMD [ "./go/opera-proxy/opera-proxy.linux-amd64 -country EU" ]
+RUN ./go/opera-proxy/opera-proxy.linux-amd64 -country EU
 
 CMD [ "node", "index.js" ]
 
