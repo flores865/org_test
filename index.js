@@ -17,7 +17,7 @@ exec("ls -la", (error, stdout, stderr) => {
 
 //const { exec } = require('child_process');
 //'ls -lh' list files in directory
-exec('./go/opera-proxy/opera-proxy -country EU', (error, stdout, stderr) => {
+exec('./go/opera-proxy/opera-proxy.linux-amd64 -country EU', (error, stdout, stderr) => {
   if (error) {
     console.error(`error: ${error.message}`);
     return;
