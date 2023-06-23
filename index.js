@@ -25,7 +25,7 @@ var server = http.createServer()
 
 server.on('connection', function(socket){
   socket.on('data', function(data) {
-      console.log(data.toString());
+      //console.log(data.toString());
   });
 });
 
