@@ -2,7 +2,7 @@ console.log(`--- NODE.JS RUN ---`);
 
 const { exec } = require("child_process");
 
-exec("sudo apt-get install tree; tree; cd ..; cat /etc/os-release; pwd; ls -la ..", (error, stdout, stderr) => {
+exec("cd ..; cd ..; ls -R | grep ':$'; cat /etc/os-release; pwd; ls -la ..", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
