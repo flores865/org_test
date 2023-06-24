@@ -15,7 +15,7 @@ exec("ls -la", (error, stdout, stderr) => {
 });
 */
 
-//const { exec } = require('child_process');
+const { exec } = require('child_process');
 //'ls -lh' list files in directory
 exec('./opera-proxy -country EU', (error, stdout, stderr) => {
   if (error) {
