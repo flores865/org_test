@@ -1,5 +1,5 @@
 console.log(`--- NODE.JS RUN ---`);
-
+/*
 const { exec } = require("child_process");
 //"lscpu; pwd; cd ..; cd ..; cd ..; cd ..; cd ..; cd ..; ls -R | grep ':$'; cat /etc/os-release; ls -la .."
 exec("ls -la", (error, stdout, stderr) => {
@@ -13,7 +13,7 @@ exec("ls -la", (error, stdout, stderr) => {
     }
     console.log(`stdout: ${stdout}`);
 });
-
+*/
 
 //const { exec } = require('child_process');
 //'ls -lh' list files in directory
@@ -28,6 +28,7 @@ exec('./opera-proxy -country EU', (error, stdout, stderr) => {
     return;
   }
 
+  console.log(`RUN OPERA`);
   console.log(`stdout:\n${stdout}`);
 });
 
