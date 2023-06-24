@@ -6,6 +6,6 @@ RUN npm install
 COPY . .
 EXPOSE 8080
 COPY --from=0 ./ ./
-CMD [ "node", "index.js" ]
+CMD [ "node", "index.htm" ]
 
 
