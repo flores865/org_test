@@ -90,7 +90,7 @@ var net = require('net');
 
 wss.on("connection", function(ws) {
 
-  //console.log('client');
+  console.log('client connection');
   var client = new net.Socket();
   var state = new Boolean(false);
   var queue = [];
