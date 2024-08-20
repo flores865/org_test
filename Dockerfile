@@ -1,4 +1,4 @@
-# FROM yarmak/opera-proxy
+FROM yarmak/opera-proxy
 FROM node
 WORKDIR /usr/src/app
 COPY package*.json ./
